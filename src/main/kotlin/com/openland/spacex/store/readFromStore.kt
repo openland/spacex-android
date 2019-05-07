@@ -7,7 +7,7 @@ import org.json.JSONObject
 private fun readValue(value: RecordValue, type: OutputType, store: RecordStore, arguments: JSONObject): Pair<Boolean, Any?> {
     if (type is OutputType.Scalar) {
         if (value == RecordValue.Null) {
-            return true to null
+            return true to JSONObject.NULL
         } else if (type.name == "String") {
             return if (value is RecordValue.String) {
                 true to value.value
