@@ -8,7 +8,7 @@ private fun serializeValue(value: RecordValue): Any? {
         is RecordValue.String -> value.value
         is RecordValue.Number -> value.value
         is RecordValue.Boolean -> value.value
-        RecordValue.Null -> null
+        RecordValue.Null -> JSONObject.NULL
         is RecordValue.Reference -> JSONObject(mapOf("key" to value.key))
         is RecordValue.List -> JSONArray(value.items.map { serializeValue(it) })
     }
@@ -18,8 +18,8 @@ fun serializeRecord(record: Record): String {
     return JSONObject(record.fields.mapValues { serializeValue(it.value) }).toString()
 }
 
-fun parseValue(f: Any?): RecordValue {
-    if (f == null) {
+fun parseValue(f: Any): RecordValue {
+    if (f == JSONObject.NULL) {
         return RecordValue.Null
     } else if (f is String) {
         return RecordValue.String(f)

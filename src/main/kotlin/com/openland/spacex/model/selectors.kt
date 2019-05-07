@@ -46,6 +46,9 @@ fun reference(name: String): InputValue.Reference {
 fun i(value: Int): InputValue.Int {
     return InputValue.Int(value)
 }
+fun f(value: Double): InputValue.Float {
+    return InputValue.Float(value)
+}
 
 fun s(value: String): InputValue.String {
     return InputValue.String(value)
@@ -60,12 +63,16 @@ fun objectValue(vararg args: Pair<String, InputValue>): InputValue.Object {
 }
 
 sealed class InputValue {
-    class Reference(val name: kotlin.String) : InputValue()
+    class String(val value: kotlin.String) : InputValue()
+    class Int(val value: kotlin.Int) : InputValue()
+    class Float(val value: kotlin.Double) : InputValue()
+    class Boolean(val value: kotlin.Boolean) : InputValue()
+    object Null : InputValue()
+
     class List(val items: Array<InputValue>) : InputValue()
     class Object(val fields: Map<kotlin.String, InputValue>) : InputValue()
 
-    class Int(val value: kotlin.Int) : InputValue()
-    class String(val value: kotlin.String) : InputValue()
+    class Reference(val name: kotlin.String) : InputValue()
 }
 
 sealed class Selector {

@@ -108,10 +108,6 @@ private fun readSelector(
                 }
             }
         } else if (f is Selector.Fragment) {
-            // Can't check for type since there typename could be subclass
-//            if (record.fields["__typename"] != RecordValue.String(f.type)) {
-//                return false
-//            }
             if (!readSelector(record, fields, store, f.fragment.selectors, arguments)) {
                 return false
             }
