@@ -1,9 +1,9 @@
 package com.openland.spacex
 
-import com.openland.spacex.model.field
-import com.openland.spacex.model.notNull
-import com.openland.spacex.model.obj
-import com.openland.spacex.model.scalar
+import com.openland.spacex.gen.field
+import com.openland.spacex.gen.notNull
+import com.openland.spacex.gen.obj
+import com.openland.spacex.gen.scalar
 import com.openland.spacex.store.Record
 import com.openland.spacex.store.RecordStore
 import com.openland.spacex.store.RecordValue

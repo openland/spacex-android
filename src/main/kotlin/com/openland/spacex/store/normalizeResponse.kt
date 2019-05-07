@@ -1,8 +1,8 @@
 package com.openland.spacex.store
 
 import com.openland.spacex.InvalidDataException
-import com.openland.spacex.model.OutputType
-import com.openland.spacex.model.Selector
+import com.openland.spacex.OutputType
+import com.openland.spacex.Selector
 import org.json.JSONArray
 import org.json.JSONObject
 

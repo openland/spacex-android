@@ -1,6 +1,5 @@
 package com.openland.spacex
 
-import com.openland.spacex.model.InputValue
 import com.openland.spacex.store.selectorKey
 import org.json.JSONArray
 import org.json.JSONObject

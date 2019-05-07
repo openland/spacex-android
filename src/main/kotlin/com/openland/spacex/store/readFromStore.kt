@@ -1,6 +1,7 @@
 package com.openland.spacex.store
 
-import com.openland.spacex.model.*
+import com.openland.spacex.OutputType
+import com.openland.spacex.Selector
 import org.json.JSONArray
 import org.json.JSONObject
 

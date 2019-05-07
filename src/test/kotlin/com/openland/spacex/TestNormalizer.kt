@@ -1,6 +1,6 @@
 package com.openland.spacex
 
-import com.openland.spacex.model.*
+import com.openland.spacex.gen.*
 import com.openland.spacex.store.RecordValue
 import com.openland.spacex.store.normalizeData
 import org.json.JSONObject
